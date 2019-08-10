@@ -34,6 +34,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: node --max-old-heap-size=8192 unboundedGrowth.js
+      - run: node --max-old-space-size=8192 unboundedGrowth.js
       - run: npm test
       - run: echo Hello Pluralsight
