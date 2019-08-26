@@ -34,6 +34,5 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run:  while true; do sleep 30s && echo "still working at `date '+%I:%M:%S %P'`..."; done
       - run: npm test
       - run: echo Hello Pluralsight
