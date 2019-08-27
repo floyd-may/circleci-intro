@@ -8,6 +8,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <a href="https://github.com/floyd-may/circleci-intro">
+          GitHub Repository
+        </a>
         <a
           className="App-link"
           href="https://reactjs.org"
