@@ -34,6 +34,5 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: exit 4
       - run: npm test
       - run: echo Hello Pluralsight
