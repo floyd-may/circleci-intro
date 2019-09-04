@@ -7,20 +7,20 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
+      - run: echo build step
+      - run: exit 4
+  test:
+    docker:
+      - image: circleci/node:7.10
 
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
+    working_directory: ~/repo
 
-      - run: npm install
+    steps:
+      - run: echo test step
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: npm test
-      - run: echo Hello Pluralsight
-      - run: echo additional build step
+workflows:
+  build-and-test:
+    - build
+    - test:
+      requires:
+        - build
