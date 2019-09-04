@@ -19,6 +19,7 @@ jobs:
       - run: echo test step
 
 workflows:
+  version: 2.0
   build-and-test:
     - build
     - test:
