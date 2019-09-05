@@ -46,7 +46,7 @@ workflows:
   publish:
     jobs:
       - publish-package
-        filters:
-          tags:
-            only:
-              - /v.*/
+          filters:
+            tags:
+              only:
+                - /v.*/
