@@ -5,13 +5,7 @@ jobs:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
-      - run: mkdir build_output
-      - run: touch build_output/compiled_output.txt
-      - persist_to_workspace:
-          root: build_output
-          paths:
-            - '*'
-
+      - run: echo build step
 
   test:
     docker:
@@ -19,9 +13,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - run: echo test step
-      - attach_workspace:
-          at: ~/repo/workspace
-      - run: ls ~/repo/workspace/compiled_output.txt
 
   deploy:
     docker:
@@ -29,9 +20,6 @@ jobs:
     working_directory: ~/repo
     steps:
       - run: echo deploy step
-      - attach_workspace:
-          at: ~/repo/workspace
-      - run: ls ~/repo/workspace/compiled_output.txt
 
 workflows:
   version: 2
