@@ -47,6 +47,6 @@ workflows:
           requires:
             - test
           filters:
-            branch:
+            branches:
               ignore:
                 - master
