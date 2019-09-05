@@ -19,14 +19,7 @@ jobs:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
-      - run: echo deploy step
-
-  publish-package:
-    docker:
-      - image: circleci/node:7.10
-    working_directory: ~/repo
-    steps:
-      - run: echo publish-package step
+      - run: echo deploy step && true --secret $MY_SECRET
 
 workflows:
   version: 2
@@ -43,13 +36,3 @@ workflows:
             branches:
               only:
                 - master
-  publish:
-    jobs:
-      - publish-package:
-          filters:
-            tags:
-              only:
-                - /v.*/
-            branches:
-              ignore:
-                - /.*/
