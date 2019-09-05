@@ -45,7 +45,7 @@ workflows:
                 - master
   publish:
     jobs:
-      - publish-package
+      - publish-package:
           filters:
             tags:
               only:
