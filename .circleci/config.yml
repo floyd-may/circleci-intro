@@ -21,12 +21,12 @@ jobs:
     steps:
       - run: echo deploy step
 
-  test-environment:
+  publish-package:
     docker:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
-      - run: echo test-environment step
+      - run: echo publish-package step
 
 workflows:
   version: 2
@@ -43,10 +43,10 @@ workflows:
             branches:
               only:
                 - master
-      - test-environment:
-          requires:
-            - test
-          filters:
-            branches:
-              ignore:
-                - master
+  publish:
+    jobs:
+      - publish-package
+        filters:
+          tags:
+            only:
+              - /v.*/
