@@ -19,7 +19,7 @@ jobs:
       - image: circleci/node:7.10
     working_directory: ~/repo
     steps:
-      - run: echo deploy step
+      - run: echo deploy step, secret $MY_SECRET
 
 workflows:
   version: 2
