@@ -36,3 +36,7 @@ jobs:
       # run tests!
       - run: npm test
       - run: echo Hello!
+      
+- store_test_results:
+    path: test-results
+
