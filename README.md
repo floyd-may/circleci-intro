@@ -7,3 +7,5 @@ This is a project to demonstrate features of CircleCI and how they integrate wit
 This is additional information that goes in the README file.
 
 ## Change One
+
+## Change Two
