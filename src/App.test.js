@@ -8,6 +8,6 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('should fail', () => {
-  expect(1).toEquals(2);
-});
+// it('should fail', () => {
+//   expect(1).toEquals(2);
+// });
