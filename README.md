@@ -6,5 +6,6 @@ This is a project to demonstrate features of CircleCI and how they integrate wit
 
 This is additional information that goes in the README file.
 
+## PRs
 Testing PRs with CircleCI
 
