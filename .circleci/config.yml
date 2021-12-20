@@ -19,4 +19,5 @@ workflows:
         - hello:
             requires:
               - node/test
-        - run: echo additional build step
+        - run: 
+            command: echo additional build step
